@@ -32,6 +32,9 @@ With this you can easily:
 * save code into a file.
 
 
+Sample
+------
+
 .. code-block:: python
 
     from pytakeout import extract_code, code_to_file
