@@ -3,6 +3,7 @@ import inspect
 
 from tempfile import NamedTemporaryFile
 
+# todo validate extracted runable
 
 def extract_code(func, new_name=None, line_joiner='\n'):
     """Extracts code lines for a given function/method and returns as a string.
