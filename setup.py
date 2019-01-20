@@ -43,9 +43,6 @@ setup(
     install_requires=[],
     setup_requires=[] + (['pytest-runner'] if 'test' in sys.argv else []) + [],
 
-    entry_points={
-    },
-
     test_suite='tests',
 
     tests_require = ['pytest'],
