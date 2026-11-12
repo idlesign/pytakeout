@@ -1,4 +1,4 @@
-import os
+from pathlib import Path
 import inspect
 
 from tempfile import NamedTemporaryFile
@@ -60,9 +60,9 @@ def code_to_file(code, filepath=None):
             filepath = f.name
 
     else:
-        filepath = os.path.abspath(filepath)
+        filepath = str(Path(filepath).resolve())
 
-    with open(filepath, 'w') as target_file:
+    with Path(filepath).open('w') as target_file:
         target_file.write(code)
         target_file.flush()
 

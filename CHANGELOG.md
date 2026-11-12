@@ -1,13 +1,8 @@
-pytakeout changelog
-===================
+# pytakeout changelog
 
+### Unreleased
+* !! Dropped QA for Python 2.
+* !! Dropped QA for Python 3.4.
 
-Unreleased
-----------
-! Dropped QA for Python 2.
-! Dropped QA for Python 3.4.
-
-
-v0.1.0
-------
-+ Basic functionality.
+### v0.1.0
+* ++ Basic functionality.

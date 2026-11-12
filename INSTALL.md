@@ -1,31 +1,25 @@
-pytakeout installation
-======================
+# pytakeout installation
 
+Python `pip` package is required to install `pytakeout`.
 
-Python ``pip`` package is required to install ``pytakeout``.
+## From sources
 
+Use the following command line to install `pytakeout` from sources directory (containing `pyproject.toml`):
 
-From sources
-------------
+```shell
+pip install .
+```
 
-Use the following command line to install ``pytakeout`` from sources directory (containing setup.py):
+## From PyPI
 
-    pip install .
+Alternatively you can install `pytakeout` from PyPI:
 
-or
-
-    python setup.py install
-
-
-From PyPI
----------
-
-Alternatively you can install ``pytakeout`` from PyPI:
-
-    pip install pytakeout
-
+```shell
+pip install pytakeout
+```
 
 Use `-U` flag for upgrade:
 
-    pip install -U pytakeout
-
+```shell
+pip install -U pytakeout
+```

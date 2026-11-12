@@ -1,10 +1,10 @@
 import sys
-import os
+from pathlib import Path
 import unittest
 
 
-DIR_CURRENT = os.path.abspath(os.path.dirname(__file__))
-DIR_PARENT = os.path.dirname(DIR_CURRENT)
+DIR_CURRENT = Path(__file__).resolve().parent
+DIR_PARENT = DIR_CURRENT.parent
 
 sys.path.insert(0, DIR_PARENT)
 

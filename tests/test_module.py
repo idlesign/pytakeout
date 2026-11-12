@@ -1,6 +1,6 @@
+from pathlib import Path
 from tempfile import NamedTemporaryFile
 
-import pytest
 
 from pytakeout import extract_code_lines, extract_code, code_to_file
 
@@ -10,7 +10,7 @@ def func_to_extract():
     return line1
 
 
-class SomeClass(object):
+class SomeClass:
 
     def method_to_extract(self):
         return 0
@@ -32,7 +32,7 @@ def test_extract_func_lines():
 
     extracted_str = extract_code(SomeClass, new_name='OtherClass', line_joiner="|")
 
-    assert extracted_str == 'class OtherClass(object):||    def method_to_extract(self):|        return 0'
+    assert extracted_str == 'class OtherClass:||    def method_to_extract(self):|        return 0'
 
 
 def test_code_to_file():
@@ -47,5 +47,5 @@ def test_code_to_file():
 
     assert fpath == code_to_file(code, filepath=fpath)
 
-    with open(filepath) as f:
+    with Path(filepath).open() as f:
         assert f.read() == code
